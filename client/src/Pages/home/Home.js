@@ -5,6 +5,7 @@ import BookList from "../../Components/booklist/BookList";
 import { useDispatch } from "react-redux";
 import { updateSearchTerm } from "../../State/search/index";
 import SubHeader from "../../Components/subheader/SubHeader";
+import People from "../../Components/people";
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -21,6 +22,9 @@ const Home = () => {
         <input type="text" onChange={handleChange}></input>
       </div>
       <BookList></BookList>
+      <div>
+        <People></People>
+      </div>
     </div>
   );
 };
