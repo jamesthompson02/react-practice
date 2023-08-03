@@ -4,6 +4,7 @@ import axios from "axios";
 import { updateAwaitingStatus } from "../../State/github-search";
 import GithubRepoCard from "../github-repo-card";
 import { keyGenerator } from "../../Utils/keyGenerator";
+import "./index.css";
 
 const GithubRepoList = () => {
   const [repos, setRepos] = useState([]);
@@ -60,7 +61,7 @@ const GithubRepoList = () => {
   }, [githubUsername]);
 
   return (
-    <div>
+    <div className="github-repo-list-container">
       {loadingStatus ? <p>Loading...</p> : null}
       {!repos.length && !githubUsername && !loadingStatus && !errorMsg ? (
         <p>Search for a GitHub User</p>

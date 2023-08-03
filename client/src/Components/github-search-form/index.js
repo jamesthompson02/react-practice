@@ -7,6 +7,7 @@ import {
   updateAwaitingStatus,
 } from "../../State/github-search";
 import { useSelector } from "react-redux";
+import "./index.css";
 
 const GithubSearchForm = () => {
   const dispatch = useDispatch();
@@ -31,7 +32,7 @@ const GithubSearchForm = () => {
   };
 
   return (
-    <form>
+    <form className="github-search-form-container">
       <SubHeader text="Search GitHub users' repositories"></SubHeader>
       <input ref={searchInput} onKeyDown={handleSubmitEnterKey} />
       <Button text="Search" func={handleSubmit}></Button>
