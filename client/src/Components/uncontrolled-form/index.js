@@ -39,10 +39,8 @@ const UncontrolledForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
-    const name = formData.get("name");
-    const email = formData.get("email");
-    const password = formData.get("password");
-    console.log(name, email, password);
+    const newUser = Object.fromEntries(formData);
+    console.log(newUser);
   };
 
   return (
